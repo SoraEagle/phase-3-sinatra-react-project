@@ -5,6 +5,5 @@ class CreateItems < ActiveRecord::Migration[6.1]
       t.integer :trip_id # Foreign Key
       t.timestamps
     end
-    add_foreign_key :items, :trips
   end
 end
