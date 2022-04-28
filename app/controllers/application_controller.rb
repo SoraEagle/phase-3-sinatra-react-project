@@ -6,4 +6,6 @@ class ApplicationController < Sinatra::Base
     { message: "Good luck with your project!" }.to_json
   end
 
+  # Add get, post, patch, and delete routes here:
+
 end
