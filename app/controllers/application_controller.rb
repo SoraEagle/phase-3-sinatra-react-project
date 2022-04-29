@@ -11,12 +11,10 @@ class ApplicationController < Sinatra::Base
     trips.to_json
   end
 
-  # Add get, post, patch, and delete routes here:
-  get '/trips/:id' do # List the trip and its items
+  get '/trips/:id' do # List the specified trip and its items
     trip = Trip.find(params[:id])
     items = trip.items.all # All of that trip's items
-    trip.to_json
-    items.to_json
+    trip.to_json(include: items)
   end
 
   # post '/trips' do
@@ -24,7 +22,10 @@ class ApplicationController < Sinatra::Base
   #   trip.to_json
   # end
 
-  patch '/item/:id' do
+  patch '/trips/item/:id' do # Update specific item's info
+    items = Item.find(param[:id])
+    items.update(name: params[:name])
+    items.to_json
   end
 
   delete '/item/:id' do # Deletes the corresponding item
