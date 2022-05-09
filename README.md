@@ -31,7 +31,6 @@ This will run your server on port [http://localhost:9292](http://localhost:9292)
 npm install
 ```
 
-
 You can start the frontend server with 
 ```
 npm start
@@ -39,9 +38,20 @@ npm start
 
 This will run the server on [this port](http://localhost:3000/).
 
+Links to the JSON data:
+
+[Trips](http://localhost:9292/trips)
+
+[Items](http://localhost:9292/items)
+
+You can add a "/:id" to the end (the :id represents the ID number) in order to view the related info on an single Trip/Item.
+
+Example: http://localhost:9292/trips/1
+
+Which displays **only** the information of the Trip with an ID of 1, and it's Items.
+
 ## Roadmap
 <!--  -->
-
 
 ## Contributing
 Pull requests are welcome.  However, if you decide to make major edits, **do not claim this as your own work!**
