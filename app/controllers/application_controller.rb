@@ -38,11 +38,17 @@ class ApplicationController < Sinatra::Base
     item.to_json
   end
 
-  patch '/items/:id' do # Update specific item's info
-    items = Item.find(param[:id])
-    items.update(name: params[:name])
-    items.to_json
+  patch '/trips/:id' do # Update specific trip's info
+    trips = Trip.find(params[:id])
+    trips.update(name: params[:name])
+    trips.to_json
   end
+
+  # patch '/items/:id' do # Update specific item's info
+  #   items = Item.find(param[:id])
+  #   items.update(name: params[:name])
+  #   items.to_json
+  # end
 
   delete '/trips/:id' do # Deletes the corresponding trip
     trip = Trip.find(params[:id])
