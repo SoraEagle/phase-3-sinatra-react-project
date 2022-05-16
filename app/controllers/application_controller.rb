@@ -23,6 +23,11 @@ class ApplicationController < Sinatra::Base
     items.to_json
   end
 
+  get '/items/:id' do # List specified item
+    items = Item.find(params[:id])
+    items.to_json
+  end
+
   post '/trips' do # Create a trip
     trip = Trip.create(
       name: params[:name]
@@ -51,6 +56,12 @@ class ApplicationController < Sinatra::Base
   # end
 
   delete '/trips/:id' do # Deletes the corresponding trip
+    trip = Trip.find(params[:id])
+    trip.destroy
+    trip.to_json
+  end
+
+  delete '/items/:id' do # Deletes the corresponding trip
     trip = Trip.find(params[:id])
     trip.destroy
     trip.to_json
