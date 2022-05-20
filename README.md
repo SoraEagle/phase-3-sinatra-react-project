@@ -1,7 +1,7 @@
 # Phase 3 Project
 
 ## Description
-This is the backend repository of the Phas 3 Project.  Here, all of the data for the Trip and Item objects is stored.
+This is the backend repository of the Phase 3 Project.  Here, all of the data for the Trip and Item objects is stored.
 
 This backend uses Ruby and Sinatra to create the routes that display this data.
 
