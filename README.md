@@ -6,8 +6,6 @@ This is the backend repository of the Phase 3 Project.  Here, all of the data fo
 This backend uses Ruby and Sinatra to create the routes that display this data.
 
 ## Visuals
-A video demonstration of this application:
-
 [My Demonstration]https://www.youtube.com/watch?v=unShpDKaARg
 
 ## Installation
