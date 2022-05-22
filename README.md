@@ -24,7 +24,6 @@ You can start your server with
 ```
 bundle exec rake server
 ```
-
 This will run your server on port [http://localhost:9292](http://localhost:9292).
 
 ### Run Frontend server
@@ -32,12 +31,10 @@ This will run your server on port [http://localhost:9292](http://localhost:9292)
 ```
 npm install
 ```
-
 You can start the frontend server with 
 ```
 npm start
 ```
-
 This will run the server on [this port](http://localhost:3000/).
 
 Links to the JSON data:
